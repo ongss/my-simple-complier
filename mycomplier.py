@@ -8,7 +8,7 @@ OP = {'+':'1','-':'2','<':'3','=':'4'}
 ans = ""
 error = False
 error_msg = ''
-openfile = False
+commandline_mode = False
 
 example_code = "10 A = 1\n20 IF 10 < A 60\n30 PRINT A\n40 A = A + 1\n 50 GOTO 20\n60 STOP"
 
@@ -140,7 +140,7 @@ def complie(s):
     return error
 
 def main():
-    if(openfile):
+    if(commandline_mode):
         if(len(sys.argv) != 2): print("invalid arguments")
         else:
             file_name = sys.argv[1]
